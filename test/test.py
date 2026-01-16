@@ -5,6 +5,6 @@ if __name__ == "__main__":
     sc = spark.sparkContext
     list1 = [1, 2, 3, 4, 5]
     rdd1 = sc.parallelize(list1)
-    result = rdd1.map(lambda x: x * 10)
-    print(result.collect())
+    rdd2 = rdd1.map(lambda x: x * 10)
+    print(rdd2.collect())
     spark.stop()
