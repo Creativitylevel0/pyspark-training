@@ -4,7 +4,7 @@ if __name__ == '__main__':
     spark = SparkSession.builder.master("local[*]").appName("pySpark Application").getOrCreate()
     sc = spark.sparkContext
 
-    orderdetailLoc = "/home/azureadmin/training/data/mongodb-classicmodels-master/csv/orderdetail.csv"
+    orderdetailLoc = "D:\\pyspark-training\\data\\mongodb-classicmodels-master\\csv\\orderdetail.csv"
     orderdetailRDD = sc.textFile(orderdetailLoc)
     # find the total sales amount for each product code
     # header : orderNumber,productCode,quantityOrdered,priceEach,orderLineNumber
