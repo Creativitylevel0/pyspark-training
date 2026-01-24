@@ -52,7 +52,8 @@ if __name__ == '__main__':
     spark = SparkSession.builder \
             .master("local[*]") \
             .appName("Database Ingestion") \
-            .config("spark.jars", "D:\\pyspark-training\\.venv\\Lib\\site-packages\\pyspark\\jars\\mssql-jdbc-13.2.1.jre11.jar") \
+            .config("spark.driver.extraClassPath",
+                    "\\pyspark-training\\.venv\\Lib\\site-packages\\pyspark\\jars\\mssql-jdbc-13.2.1.jre11.jar") \
             .getOrCreate()
     
     db = get_db_config()
@@ -60,7 +61,7 @@ if __name__ == '__main__':
     f"jdbc:sqlserver://{db['host']}:{db['port']};"
     f"databaseName={db['database']}"
 )
-    logFileLoc = "D:\\pyspark-training\\data\\log_file.txt"
+    logFileLoc = "\\pyspark-training\\data\\log_file.txt"
     logFileSchema = ("""date DATE,
                         time TIMESTAMP,
                         size INT,
@@ -76,7 +77,7 @@ if __name__ == '__main__':
                 .schema(logFileSchema)
                 .csv(logFileLoc)
 )
-    orderFileLoc = "D:\\pyspark-training\\data\\mongodb-classicmodels-master\\csv\\order.csv"
+    orderFileLoc = "\\pyspark-training\\data\\mongodb-classicmodels-master\\csv\\order.csv"
     ordersSchema = "orderNumber int,orderDate date,requiredDate date,shippedDate date,status string,comments string,customerNumber int"
     ordersDF = getDataframeFromCSVFileWithHeader(spark, orderFileLoc, ordersSchema)
     write_to_db(ordersDF, "dbo.ordersTable", jdbc_url)
