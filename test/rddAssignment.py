@@ -23,7 +23,9 @@ if __name__ == "__main__":
     print("Total Downloads by Country and r_os (sorted descending): ", totalNumberOfDownloadsSorted.take(10))
 
     #Assignment 2: Use Accumulator to count number of large downloads (size >= 1,000,000)
-    totalCount = countLargeDownloads(sc, logFileDataRDD)
-    print(f"Total number of records where size >= 1000000: {totalCount}")
+    totalSizeCount = countLargeDownloads(sc, logFileDataRDD)
+    print(f"Total number of records where size >= 1000000: {totalSizeCount}")
+
+
 
     spark.stop()
