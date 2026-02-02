@@ -1,0 +1,11 @@
+v1
+{"path":"file:///D:/pyspark-training/data/retailstream/data/orderdetail.csv","timestamp":1576199141000,"batchId":0}
+{"path":"file:///D:/pyspark-training/data/retailstream/data/orderdetail10.csv","timestamp":1576199141000,"batchId":1}
+{"path":"file:///D:/pyspark-training/data/retailstream/data/orderdetail11.csv","timestamp":1576199141000,"batchId":2}
+{"path":"file:///D:/pyspark-training/data/retailstream/data/orderdetail2.csv","timestamp":1576199141000,"batchId":3}
+{"path":"file:///D:/pyspark-training/data/retailstream/data/orderdetail3.csv","timestamp":1576199141000,"batchId":4}
+{"path":"file:///D:/pyspark-training/data/retailstream/data/orderdetail4.csv","timestamp":1576199141000,"batchId":5}
+{"path":"file:///D:/pyspark-training/data/retailstream/data/orderdetail5.csv","timestamp":1576199141000,"batchId":6}
+{"path":"file:///D:/pyspark-training/data/retailstream/data/orderdetail6.csv","timestamp":1576199141000,"batchId":7}
+{"path":"file:///D:/pyspark-training/data/retailstream/data/orderdetail7.csv","timestamp":1576199141000,"batchId":8}
+{"path":"file:///D:/pyspark-training/data/retailstream/data/orderdetail8.csv","timestamp":1576199141000,"batchId":9}
